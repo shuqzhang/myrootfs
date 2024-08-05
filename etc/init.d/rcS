@@ -4,7 +4,8 @@ mount -t sysfs none /sys
 mount -t debugfs none /sys/kernel/debug
 
 source /etc/profile
-/mountshare.sh
+sh /mountshare.sh
 
+setlevel 8
 
 

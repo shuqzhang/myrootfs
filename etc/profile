@@ -1,4 +1,4 @@
 export LD_LIBRARY_PATH=/lib64:/libc/lib:/libc/lib64:/util-linux:$LD_LIBRARY_PATH
-export PATH=/libc/sbin:/libc/usr/bin:libc/usr/sbin:/util-linux:$PATH
+export PATH=/libc/sbin:/libc/usr/bin:libc/usr/sbin:/util-linux:/share/mydrivers/misc_progs:$PATH
 
 
