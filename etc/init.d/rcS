@@ -10,7 +10,7 @@ source /etc/profile
 sh /mountshare.sh
 
 setlevel 8
-
+echo "test echo"
 sh /etc/network/config_tap
-
+/etc/init.d/sshd start
 
