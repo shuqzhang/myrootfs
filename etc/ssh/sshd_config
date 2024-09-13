@@ -10,7 +10,7 @@
 # possible, but leave them commented.  Uncommented options override the
 # default value.
 
-#Port 22
+Port 22
 #AddressFamily any
 #ListenAddress 0.0.0.0
 #ListenAddress ::
@@ -21,11 +21,8 @@ HostKey /etc/ssh_host_ecdsa_key
 HostKey /etc/ssh_host_ed25519_key
 
 #Privilege Separation is turned on for security
-UsePrivilegeSeparation yes
 
 # Lifetime and size of ephemeral version 1 server key
-KeyRegenerationInterval 1h
-ServerKeyBits 1024
 
 # Ciphers and keying
 #RekeyLimit default none
@@ -88,7 +85,6 @@ ChallengeResponseAuthentication no
 # If you just want the PAM account and session checks to run without
 # PAM authentication, then enable this but set PasswordAuthentication
 # and ChallengeResponseAuthentication to 'no'.
-UsePAM no
 
 #AllowAgentForwarding yes
 #AllowTcpForwarding yes

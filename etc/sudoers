@@ -1,0 +1,1 @@
+ALL ALL=(ALL) ALL # WARNING: only use this together with 'Defaults targetpw'

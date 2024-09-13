@@ -18,7 +18,7 @@ if test -f /etc/default/ssh; then
     . /etc/default/ssh
 fi
 
-[ -z "$SYSCONFDIR" ] && SYSCONFDIR=/etc/ssh
+[ -z "$SYSCONFDIR" ] && SYSCONFDIR=/etc
 mkdir -p $SYSCONFDIR
 
 HOST_KEY_RSA=$SYSCONFDIR/ssh_host_rsa_key
@@ -75,6 +75,7 @@ case "$1" in
     echo "Starting OpenBSD Secure Shell server: sshd"
     check_keys
     check_privsep_dir
+    echo "start-stop-daemon -S -p $PIDFILE -x /usr/sbin/sshd -- $SSHD_OPTS"
     start-stop-daemon -S -p $PIDFILE -x /usr/sbin/sshd -- $SSHD_OPTS
         echo "done."
     ;;
