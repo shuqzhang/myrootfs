@@ -2,6 +2,7 @@
 set -e
 
 PIDFILE=/var/run/sshd.pid
+SSHD_OPTS=-d
 
 echo "$1"
 # source function library
@@ -18,7 +19,7 @@ if test -f /etc/default/ssh; then
     . /etc/default/ssh
 fi
 
-[ -z "$SYSCONFDIR" ] && SYSCONFDIR=/etc
+[ -z "$SYSCONFDIR" ] && SYSCONFDIR=/etc/ssh
 mkdir -p $SYSCONFDIR
 
 HOST_KEY_RSA=$SYSCONFDIR/ssh_host_rsa_key
