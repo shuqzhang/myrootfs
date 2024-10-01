@@ -9,9 +9,9 @@ mount -t debugfs none /sys/kernel/debug
 source /etc/profile
 sh /mountshare.sh
 
-setlevel 8
+#setlevel 8
 
 echo "test echo"
-sh /etc/network/config_tap
-/etc/init.d/sshd start
+#sh /etc/network/config_tap
+#/etc/init.d/sshd start
 
